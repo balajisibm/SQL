@@ -28,8 +28,10 @@ Find out the list of distinct recalling firms & their ---status that belongs to 
 SQL Code-2:
 
 SELECT DISTINCT recalling_firm , status
- FROM `bigquery-public-data.fda_food.food_enforcement` 
- where country = "Canada" AND classification = "Class I"
+
+FROM `bigquery-public-data.fda_food.food_enforcement` 
+
+where country = "Canada" AND classification = "Class I"
  
  ![image](https://user-images.githubusercontent.com/89524685/131256917-b4b875cb-f7cb-4414-af47-fba0e1826456.png)
 
@@ -41,7 +43,9 @@ Find out the total number of products that are recalled under all the 3types of 
 SQL Code-3:
 
 SELECT COUNT(classification)
+
 FROM `bigquery-public-data.fda_food.food_enforcement` 
+
 WHERE reason_for_recall LIKE "% undeclared milk %"
 
 ![image](https://user-images.githubusercontent.com/89524685/131256947-ee9ef2ef-e79c-4d70-9b95-bb8d635a7268.png)
@@ -55,7 +59,9 @@ Which product (Product_description) has been recalled maximum number of times un
 SQL Code-4.1:
 
 SELECT distinct  max(product_description) 
- FROM `bigquery-public-data.fda_food.food_enforcement` 
+
+FROM `bigquery-public-data.fda_food.food_enforcement` 
+
 where classification = "Class I"
 
 ![image](https://user-images.githubusercontent.com/89524685/131256967-69f710c4-6542-4090-a5ba-674a23b45644.png)
@@ -70,7 +76,9 @@ which firm has be recalled for maximum number of times for the product descripti
 SQL Code-4.2: 
 
 SELECT distinct recalling_firm
+
 FROM `bigquery-public-data.fda_food.food_enforcement` 
+
 where product_description = "white and dark chocolate pecan turtles and tortoises"
 
 ![image](https://user-images.githubusercontent.com/89524685/131256989-324d6ee0-a4f2-4256-937d-5dcb7062a383.png)
@@ -83,9 +91,13 @@ Select the products industry name from fda_events & the classification of that p
 SQL Code-5:
 
 SELECT  distinct products_industry_name , classification
+
 FROM `bigquery-public-data.fda_food.food_enforcement`
+
 left join `bigquery-public-data.fda_food.food_events`
+
 ON `bigquery-public-data.fda_food.food_enforcement`.report_date = `bigquery-public-data.fda_food.food_events`.date_created
+
 where country = "Israel"
 
 ![image](https://user-images.githubusercontent.com/89524685/131257021-56ba8991-d756-4751-b40f-6e63ffc0ea94.png)
@@ -98,9 +110,13 @@ Find the list of outcome, how/who it was initiated it & the products name using 
 SQL Code-6:
 
 SELECT  distinct  outcomes,  voluntary_mandated , products_industry_name
+
 FROM `bigquery-public-data.fda_food.food_enforcement`
+
 inner join `bigquery-public-data.fda_food.food_events`
+
 ON `bigquery-public-data.fda_food.food_enforcement`.report_date = `bigquery-public-data.fda_food.food_events`.date_created
+
 Where products_brand_name  NOT IN('Green gaint corn' ,"GOLDEN EXTRA LONG GRAIN WHITE RICE","LUPINE FLOUR") 
 
 ![image](https://user-images.githubusercontent.com/89524685/131257037-e06be409-691e-42bd-9363-a735d53d2990.png)
