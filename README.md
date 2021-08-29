@@ -22,8 +22,11 @@ having count(classification) > 4
 
 
 
+
+
 Question-2:
 Find out the list of distinct recalling firms & their ---status that belongs to the CANADA & of Class -1
+
 
 SQL Code-2:
 
@@ -38,8 +41,10 @@ where country = "Canada" AND classification = "Class I"
 
 
 
+
 Question-3:
 Find out the total number of products that are recalled under all the 3types of class with “undeclared milk “ as the reason.
+
 
 SQL Code-3:
 
@@ -54,8 +59,10 @@ WHERE reason_for_recall LIKE "% undeclared milk %"
 
 
 
+
 Question-4.1:
 Which product (Product_description) has been recalled maximum number of times under class-1
+
 
 SQL Code-4.1:
 
@@ -71,8 +78,10 @@ where classification = "Class I"
 
 
 
+
 Question-4.2:
 which firm has be recalled for maximum number of times for the product description that you get from the question 4.1
+
 
 SQL Code-4.2: 
 
@@ -86,8 +95,11 @@ where product_description = "white and dark chocolate pecan turtles and tortoise
 
 
 
+
+
 Question -5:
 Select the products industry name from fda_events & the classification of that products from fda_enforcement of a particular country “Israel”. 
+
 
 SQL Code-5:
 
@@ -105,8 +117,12 @@ where country = "Israel"
 
 
 
+
+
 Question-6:
 Find the list of outcome, how/who it was initiated it & the products name using right join where the products brand name does not belong to “Green gaint corn, golden extra long , lupin flour”
+
+
 
 SQL Code-6:
 
