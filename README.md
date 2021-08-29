@@ -3,7 +3,7 @@
 The data set that I have considered to perform the given assignment are given below 
 Dataset 1: fda_enforcement -- `bigquery-public-data.fda_food.food_enforcement`
 Dataset 2: fda_events -- `bigquery-public-data.fda_food.food_events`
-The above 2 dataset are available in GCP under bigquery-public-data under the section name fda_foods
+The above 2 dataset are available in GCP under bigquery-public-data under the section name fda_foodS
 
 Question-1:
 Count the number of classification in each country   to show how many product are being violated by each country where the number of products violated greater than  4
