@@ -29,10 +29,9 @@ Find out the list of distinct recalling firms & their ---status that belongs to 
 
 SQL Code-2:
 
-```SELECT DISTINCT recalling_firm , status
-
+```
+SELECT DISTINCT recalling_firm , status
 FROM `bigquery-public-data.fda_food.food_enforcement` 
-
 where country = "Canada" AND classification = "Class I"
 ```
  
@@ -48,10 +47,9 @@ Find out the total number of products that are recalled under all the 3types of 
 
 SQL Code-3:
 
-```SELECT COUNT(classification)
-
+```
+SELECT COUNT(classification)
 FROM `bigquery-public-data.fda_food.food_enforcement` 
-
 WHERE reason_for_recall LIKE "% undeclared milk %"
 ```
 
@@ -67,10 +65,9 @@ Which product (Product_description) has been recalled maximum number of times un
 
 SQL Code-4.1:
 
-```SELECT distinct  max(product_description) 
-
+```
+SELECT distinct  max(product_description) 
 FROM `bigquery-public-data.fda_food.food_enforcement` 
-
 where classification = "Class I"
 ```
 
@@ -87,10 +84,9 @@ which firm has be recalled for maximum number of times for the product descripti
 
 SQL Code-4.2: 
 
-```SELECT distinct recalling_firm
-
+```
+SELECT distinct recalling_firm
 FROM `bigquery-public-data.fda_food.food_enforcement` 
-
 where product_description = "white and dark chocolate pecan turtles and tortoises"
 ```
 
@@ -106,14 +102,11 @@ Select the products industry name from fda_events & the classification of that p
 
 SQL Code-5:
 
-```SELECT  distinct products_industry_name , classification
-
+```
+SELECT  distinct products_industry_name , classification
 FROM `bigquery-public-data.fda_food.food_enforcement`
-
 left join `bigquery-public-data.fda_food.food_events`
-
 ON `bigquery-public-data.fda_food.food_enforcement`.report_date = `bigquery-public-data.fda_food.food_events`.date_created
-
 where country = "Israel"
 ```
 
@@ -130,14 +123,11 @@ Find the list of outcome, how/who it was initiated it & the products name using 
 
 SQL Code-6:
 
-```SELECT  distinct  outcomes,  voluntary_mandated , products_industry_name
-
+```
+SELECT  distinct  outcomes,  voluntary_mandated , products_industry_name
 FROM `bigquery-public-data.fda_food.food_enforcement`
-
 inner join `bigquery-public-data.fda_food.food_events`
-
 ON `bigquery-public-data.fda_food.food_enforcement`.report_date = `bigquery-public-data.fda_food.food_events`.date_created
-
 Where products_brand_name  NOT IN('Green gaint corn' ,"GOLDEN EXTRA LONG GRAIN WHITE RICE","LUPINE FLOUR") 
 ```
 
