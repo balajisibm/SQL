@@ -33,7 +33,8 @@ FROM `bigquery-public-data.fda_food.food_enforcement`
 
 where country = "Canada" AND classification = "Class I"
  
- ![image](https://user-images.githubusercontent.com/89524685/131256917-b4b875cb-f7cb-4414-af47-fba0e1826456.png)
+![image](https://user-images.githubusercontent.com/89524685/131257232-5d59a626-e450-419e-8a27-46a10611f9d2.png)
+
 
 
 
