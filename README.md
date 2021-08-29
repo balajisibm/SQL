@@ -20,7 +20,7 @@ Question-4.1:
 Which product (Product_description) has been recalled maximum number of times under class-1
 
 Question-4.2:
-which firm has be recalled for maximum number of times for the product description that you get from the question 5.1
+which firm has be recalled for maximum number of times for the product description that you get from the question 4.1
 
 
 
