@@ -22,13 +22,12 @@ Which product (Product_description) has been recalled maximum number of times un
 Question-4.2:
 which firm has be recalled for maximum number of times for the product description that you get from the question 5.1
 
-Question-5:
-Find the list of reason to recall & count their symptoms developed among the people (reactions happened in the body after consuming) & limit it to 10
 
-Question -6:
+
+Question -5:
 Select the products industry name from fda_events & the classification of that products from fda_enforcement of a particular country “Israel”. 
 
-Question-7:
+Question-6:
 Find the list of outcome, how/who it was initiated it & the products name using right join where the products brand name does not belong to “Green gaint corn, golden extra long , lupin flour”
 
 
