@@ -30,15 +30,9 @@ SELECT distinct recalling_firm
  FROM `bigquery-public-data.fda_food.food_enforcement` 
 where product_description = "white and dark chocolate pecan turtles and tortoises"
 
+
+
 SQL Code-5:
-
-SELECT  distinct  reason_for_recall ,count(reactions)
-FROM `bigquery-public-data.fda_food.food_enforcement`
-inner join `bigquery-public-data.fda_food.food_events`
-ON `bigquery-public-data.fda_food.food_enforcement`.report_date = `bigquery-public-data.fda_food.food_events`.date_created
-group by reason_for_recall limit 10
-
-SQL Code-6:
 
 SELECT  distinct products_industry_name , classification
 FROM `bigquery-public-data.fda_food.food_enforcement`
@@ -46,7 +40,7 @@ left join `bigquery-public-data.fda_food.food_events`
 ON `bigquery-public-data.fda_food.food_enforcement`.report_date = `bigquery-public-data.fda_food.food_events`.date_created
 where country = "Israel"
 
-SQL Code-7:
+SQL Code-6:
 
 SELECT  distinct  outcomes,  voluntary_mandated , products_industry_name
 FROM `bigquery-public-data.fda_food.food_enforcement`
