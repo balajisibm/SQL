@@ -11,8 +11,11 @@ Count the number of classification in each country   to show how many product ar
 SQL Code-1:
 
 SELECT distinct count(classification) ,country
+
 FROM `bigquery-public-data.fda_food.food_enforcement` 
+
 group by country
+
 having count(classification) > 4
 
 ![image](https://user-images.githubusercontent.com/89524685/131256847-a73e7157-db6d-45e4-82d2-211dd1a15a11.png)
