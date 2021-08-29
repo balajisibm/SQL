@@ -14,22 +14,21 @@ Find out the list of distinct recalling firms & their ---status that belongs to 
 Question-3:
 Find out the total number of products that are recalled under all the 3types of class with “undeclared milk “ as the reason.
 
-Question-4:
-How many times a product has been recalled count the number of recall reason group & order them by reason for recall
 
-Question-5.1:
+
+Question-4.1:
 Which product (Product_description) has been recalled maximum number of times under class-1
 
-Question-5.2:
+Question-4.2:
 which firm has be recalled for maximum number of times for the product description that you get from the question 5.1
 
-Question-6:
+Question-5:
 Find the list of reason to recall & count their symptoms developed among the people (reactions happened in the body after consuming) & limit it to 10
 
-Question -7:
+Question -6:
 Select the products industry name from fda_events & the classification of that products from fda_enforcement of a particular country “Israel”. 
 
-Question-8:
+Question-7:
 Find the list of outcome, how/who it was initiated it & the products name using right join where the products brand name does not belong to “Green gaint corn, golden extra long , lupin flour”
 
 
