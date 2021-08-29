@@ -17,25 +17,20 @@ SELECT COUNT(classification)
  FROM `bigquery-public-data.fda_food.food_enforcement` 
  WHERE reason_for_recall LIKE "% undeclared milk %"
 
-SQL Code-4:
+ 
 
-SELECT distinct reason_for_recall ,count(reason_for_recall)
- FROM `bigquery-public-data.fda_food.food_enforcement` 
- group by reason_for_recall
- order by reason_for_recall desc 
-
-SQL Code-5.1:
+SQL Code-4.1:
 SELECT distinct  max(product_description) 
  FROM `bigquery-public-data.fda_food.food_enforcement` 
 where classification = "Class I"
 
-SQL Code-5.2: 
+SQL Code-4.2: 
 
 SELECT distinct recalling_firm
  FROM `bigquery-public-data.fda_food.food_enforcement` 
 where product_description = "white and dark chocolate pecan turtles and tortoises"
 
-SQL Code-6:
+SQL Code-5:
 
 SELECT  distinct  reason_for_recall ,count(reactions)
 FROM `bigquery-public-data.fda_food.food_enforcement`
@@ -43,7 +38,7 @@ inner join `bigquery-public-data.fda_food.food_events`
 ON `bigquery-public-data.fda_food.food_enforcement`.report_date = `bigquery-public-data.fda_food.food_events`.date_created
 group by reason_for_recall limit 10
 
-SQL Code-7:
+SQL Code-6:
 
 SELECT  distinct products_industry_name , classification
 FROM `bigquery-public-data.fda_food.food_enforcement`
@@ -51,7 +46,7 @@ left join `bigquery-public-data.fda_food.food_events`
 ON `bigquery-public-data.fda_food.food_enforcement`.report_date = `bigquery-public-data.fda_food.food_events`.date_created
 where country = "Israel"
 
-SQL Code-8:
+SQL Code-7:
 
 SELECT  distinct  outcomes,  voluntary_mandated , products_industry_name
 FROM `bigquery-public-data.fda_food.food_enforcement`
