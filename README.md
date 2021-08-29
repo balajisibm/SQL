@@ -1,4 +1,4 @@
-# SQL-fda_foods
+# SQL-fda_foods in google bigquery dataset
 
 The data set that I have considered to perform the given assignment are given below 
 Dataset 1: fda_enforcement -- `bigquery-public-data.fda_food.food_enforcement`
