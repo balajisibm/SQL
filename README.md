@@ -24,7 +24,7 @@ having count(classification) > 4
 
 
 Question-2:
-Find out the list of distinct recalling firms & their ---status that belongs to the CANADA & of Class -1
+Find out the list of distinct recalling firms & their status that belongs to the CANADA & of Class -1
 
 
 SQL Code-2:
