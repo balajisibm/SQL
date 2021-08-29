@@ -1,0 +1,66 @@
+SQL Code-1:
+
+SELECT distinct count(classification) ,country
+ FROM `bigquery-public-data.fda_food.food_enforcement` 
+ group by country
+having count(classification) > 4
+
+SQL Code-2:
+
+SELECT DISTINCT recalling_firm , status
+ FROM `bigquery-public-data.fda_food.food_enforcement` 
+ where country = "Canada" AND classification = "Class I"
+
+SQL Code-3:
+
+SELECT COUNT(classification)
+ FROM `bigquery-public-data.fda_food.food_enforcement` 
+ WHERE reason_for_recall LIKE "% undeclared milk %"
+
+SQL Code-4:
+
+SELECT distinct reason_for_recall ,count(reason_for_recall)
+ FROM `bigquery-public-data.fda_food.food_enforcement` 
+ group by reason_for_recall
+ order by reason_for_recall desc 
+
+SQL Code-5.1:
+SELECT distinct  max(product_description) 
+ FROM `bigquery-public-data.fda_food.food_enforcement` 
+where classification = "Class I"
+
+SQL Code-5.2: 
+
+SELECT distinct recalling_firm
+ FROM `bigquery-public-data.fda_food.food_enforcement` 
+where product_description = "white and dark chocolate pecan turtles and tortoises"
+
+SQL Code-6:
+
+SELECT  distinct  reason_for_recall ,count(reactions)
+FROM `bigquery-public-data.fda_food.food_enforcement`
+inner join `bigquery-public-data.fda_food.food_events`
+ON `bigquery-public-data.fda_food.food_enforcement`.report_date = `bigquery-public-data.fda_food.food_events`.date_created
+group by reason_for_recall limit 10
+
+SQL Code-7:
+
+SELECT  distinct products_industry_name , classification
+FROM `bigquery-public-data.fda_food.food_enforcement`
+left join `bigquery-public-data.fda_food.food_events`
+ON `bigquery-public-data.fda_food.food_enforcement`.report_date = `bigquery-public-data.fda_food.food_events`.date_created
+where country = "Israel"
+
+SQL Code-8:
+
+SELECT  distinct  outcomes,  voluntary_mandated , products_industry_name
+FROM `bigquery-public-data.fda_food.food_enforcement`
+right join `bigquery-public-data.fda_food.food_events`
+ON `bigquery-public-data.fda_food.food_enforcement`.report_date = `bigquery-public-data.fda_food.food_events`.date_created
+Where products_brand_name  NOT IN('Green gaint corn' ,"GOLDEN EXTRA LONG GRAIN WHITE RICE","LUPINE FLOUR") 
+
+
+
+
+
+
